@@ -114,7 +114,7 @@ class DataEngine:
         """
         Gets market index price e.g SPY. One can change it to some other index
         """
-        symbol = self.args.market_index
+        symbol = "^" + self.args.market_index
         stock_price_data, future_prices, not_found = self.get_data(symbol)
         if not_found:
             return None, None
